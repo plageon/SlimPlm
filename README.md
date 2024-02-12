@@ -61,6 +61,8 @@ For ASQA, NaturalQuestions, TriviaQA, and ELI5, please download the data from [k
 
 For MuSiQue, please download the data from [MuSiQue](https://github.com/StonyBrookNLP/musique).
 
+The sampled test set ids are provided in [user_intent_data](./user_intent_data) directory.
+
 ## SlimPLM
 ### Model Fine-tuning
 Prepare fine-tuning data for retrieval necessity judgment model, please refer to [prepare_data.ipynb](jupyter/prepare_data.ipynb).

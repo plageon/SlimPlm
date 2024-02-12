@@ -67,6 +67,9 @@ The sampled test set ids are provided in [user_intent_data](./user_intent_data) 
 ### Model Fine-tuning
 Prepare fine-tuning data for retrieval necessity judgment model, please refer to [prepare_data.ipynb](jupyter/prepare_data.ipynb).
 
+We release our fine-tuning data for retrieval necessity judgment model in [v0104](./user_intent_data/mixed/v0104/).
+The fine-tuning data for query rewriting model is released in [v0118](./user_intent_data/mixed/v0118/).
+
 ### Model Inference
 Prepare fine-tuning data for query rewriting model, please refer to [gpt4_annotation.sh](scripts/gpt4_annotation.sh) and [seperate_claims.sh](scripts/seperate_claims.sh).
 

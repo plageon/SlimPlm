@@ -44,7 +44,7 @@ conda install -c anaconda mongodb
 conda install -c conda-forge mongo-tools
 wget http://dl.fbaipublicfiles.com/KILT/kilt_knowledgesource.json
 mongoimport --db kilt --collection knowledgesource --file kilt_knowledgesource.json
-mongod --dbpath /cpfs01/shared/bc_alignment/jiejuntan/mongodb/ --fork --logpath mongod.out
+mongod --dbpath ./mongodb/ --fork --logpath mongod.out
 ```
 ```bash
 #rerank and retrieval API build up

@@ -36,11 +36,8 @@ pip install vllm
 pip install flash-attn --no-build-isolation
 ```
 
-### KILT Search Engine
-```bash
-
 ### Search Corpus Preparation
-Build data corpus for kilt, please refer to [kilt](https://github.com/facebookresearch/KILT) for more details.
+Build kilt data corpus, please refer to [kilt](https://github.com/facebookresearch/KILT) for more details.
 ```bash
 # prepare mongodb for kilt data corpus
 conda install -c anaconda mongodb

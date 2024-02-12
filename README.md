@@ -4,6 +4,8 @@
 The code repository for the anonymous submission for ACL 2024:
 _Detect Missing Knowledge in LLMs with Slim Proxy Language Model_.
 
+![main-pipeline](./figures/main-pipeline.png)
+
 ## Pre-requisites
 ### Environment
 Prepare python environment with the following command:

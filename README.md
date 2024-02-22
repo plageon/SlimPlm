@@ -72,7 +72,7 @@ Prepare fine-tuning data for retrieval necessity judgment model, please refer to
 We release our fine-tuning data for retrieval necessity judgment model in [v0104](./user_intent_data/mixed/v0104/).
 The fine-tuning data for query rewriting model is released in [v0118](./user_intent_data/mixed/v0118/).
 
-The fine-tuned retrieval necessity judgment model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Search-Necessity-Judgment), and the query rewriting model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/).
+The fine-tuned retrieval necessity judgment model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Retrieval-Necessity-Judgment), and the query rewriting model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/).
 
 ### Model Inference
 Prepare fine-tuning data for query rewriting model, please refer to [gpt4_annotation.sh](scripts/gpt4_annotation.sh) and [seperate_claims.sh](scripts/seperate_claims.sh).
@@ -111,9 +111,9 @@ If you use the code in this repository, please cite the following paper:
 ```
 @inproceedings{Tan2024SmallMB,
   title={Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs},
-  author={Jiejun Tan and Zhicheng Dou and Yutao Zhu and Peidong Guo and Kun Fang and Jinhui Wen},
+  author={Jiejun Tan and Zhicheng Dou and Yutao Zhu and Peidong Guo and Kun Fang and Ji-Rong Wen},
   year={2024},
-  url={https://api.semanticscholar.org/CorpusID:267750726}
+  url={https://arxiv.org/abs/2402.12052}
 }
 ```
 

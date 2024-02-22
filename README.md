@@ -1,6 +1,11 @@
 
 # SlimPLM
 
+
+<p align="center">
+📝 <a href="https://arxiv.org/abs/2402.12052" target="_blank">Paper</a> • 🤗 <a href="https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/" target="_blank">Hugging Face</a> • 🧩 <a href="https://github.com/plageon/SlimPLM" target="_blank">Github</a>
+</p>
+
 The code repository for the anonymous submission for ACL 2024:
 _Detect Missing Knowledge in LLMs with Slim Proxy Language Model_.
 
@@ -67,6 +72,8 @@ Prepare fine-tuning data for retrieval necessity judgment model, please refer to
 We release our fine-tuning data for retrieval necessity judgment model in [v0104](./user_intent_data/mixed/v0104/).
 The fine-tuning data for query rewriting model is released in [v0118](./user_intent_data/mixed/v0118/).
 
+The fine-tuned retrieval necessity judgment model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Search-Necessity-Judgment), and the query rewriting model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/).
+
 ### Model Inference
 Prepare fine-tuning data for query rewriting model, please refer to [gpt4_annotation.sh](scripts/gpt4_annotation.sh) and [seperate_claims.sh](scripts/seperate_claims.sh).
 
@@ -85,6 +92,7 @@ Follow these steps to reproduce the results in the paper.
 6. Run search inference using scripts in [scripts/search_pipeline_apply.sh](scripts/search_pipeline_apply.sh).
 7. Run rerank inference using scripts in [scripts/rerank_passage.sh](scripts/rerank_passage.sh).
 8. Run evaluation on large language model using rag. Please make sure the "prompt_method" is "v0118{proxy_model_name}_rewrite_search", such as "v0118llama7b_rewrite_search".
+
 ### Evaluation
 Run evalation for short form answer dataset or long form answer dataset, please refer to [evaluation_scripts.sh](scripts/evaluation_scripts.sh).
 

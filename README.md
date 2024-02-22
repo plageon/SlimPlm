@@ -74,6 +74,17 @@ Run chat inference for proxy language model or large language model, please refe
 
 Run inference on the fine-tuned retrieval necessity judgment model or query rewriting model, please refer to [query_rewrite_inference.sh](scripts/query_rewrite_inference.sh).
 
+### Reproduce Results
+Follow these steps to reproduce the results in the paper.
+
+1. Reproduce Direct Chat results, run chat inference for proxy language model or large language model. Make sure the "prompt_method" is "without_search".
+2. Run inference on retrieval necessity judgment model, make sure the "rewrite_model" is "v0104".
+3. Parse llama judge output strings. Please refer to scripts in [prepare_data.ipynb](jupyter/prepare_data.ipynb).
+4. Run inference on query rewriting model, make sure the "rewrite_model" is "v0108".
+5. Parse llama question rewrite & separate claim results. Please refer to scripts in [prepare_data.ipynb](jupyter/prepare_data.ipynb).
+6. Run search inference using scripts in [scripts/search_pipeline_apply.sh](scripts/search_pipeline_apply.sh).
+7. Run rerank inference using scripts in [scripts/rerank_passage.sh](scripts/rerank_passage.sh).
+8. Run evaluation on large language model using rag. Please make sure the "prompt_method" is "v0118{proxy_model_name}_rewrite_search", such as "v0118llama7b_rewrite_search".
 ### Evaluation
 Run evalation for short form answer dataset or long form answer dataset, please refer to [evaluation_scripts.sh](scripts/evaluation_scripts.sh).
 

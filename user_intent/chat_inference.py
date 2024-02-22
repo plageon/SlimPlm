@@ -38,6 +38,10 @@ def sending_inference_request(question):
     if "qwen7b" in chat_model and local_model is not None:
         response, history = local_model.chat(tokenizer, question, history=None)
         return response
+    if "baichuan7b" in chat_model and local_model is not None:
+        messages = [{"role": "user", "content": question}]
+        response = local_model.chat(tokenizer, messages)
+        return response
     if "tinyllama" in chat_model and local_model is not None:
         messages = [
             {
@@ -103,7 +107,7 @@ def chat_prompt_vanilla_search(data_line, search_engine, chat_model):
             _context = _context[:-2]
             context = "\n".join(_context)
             prompt = llama_rag_prompt.format(context=context, question=question)
-    elif "qwen" in chat_model:
+    elif "qwen" in chat_model or "baichuan" in chat_model:
         prompt = qwen_rag_prompt.format(context=context, question=question)
         if dataset in ["webglm-qa", "dolly", "eli5"]:
             #  long form qa dataset, truncate the prompt to prevent memory error
@@ -285,6 +289,18 @@ if __name__ == '__main__':
         model.config.pad_token_id = model.config.eos_token_id
         print(f"loaded tokenizer {tokenizer}")
         print(f"loaded model {model}")
+    elif "baichuan7b" in chat_model:
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        from transformers.generation.utils import GenerationConfig
+
+        tokenizer = AutoTokenizer.from_pretrained("../../huggingface/Baichuan2-7B-Chat", use_fast=False,
+                                                  trust_remote_code=True)
+        local_model = AutoModelForCausalLM.from_pretrained("../../huggingface/Baichuan2-7B-Chat", device_map="auto",
+                                                     torch_dtype=torch.bfloat16, trust_remote_code=True)
+        local_model.generation_config = GenerationConfig.from_pretrained("../../huggingface/Baichuan2-7B-Chat")
+        local_model.eval()
+        print(f"loaded tokenizer {tokenizer}")
+        print(f"loaded model {local_model}")
 
     if args.mini_dataset:
         data_lines = data_lines[:20]
@@ -314,9 +330,11 @@ if __name__ == '__main__':
 
             elif prompt_method == "without_search":
                 #  do not use rag prompt for without search
+                #  We use the prompt "Please answer the question professionally and provide explanations." to elicit more detailed heuristic answer using Qwen-7B-Chat, Baichuan2-7B-Chat, Phi2, and Tinyllama-1.1B-Chat.
+                #  Llama models tend to explain the answer in a more detailed way without the need of a prompt.
                 tinyllama_sys_rag_prompt = tinyllama_sys_prompt
-                if "baichuan" in chat_model:
-                    model_input = "<C_Q> " + data_line["question"] + " <C_A>"
+                if "baichuan7b" in chat_model:
+                    model_input = f"Please answer the question professionally and provide explanations. Question(({data_line['question']}))"
                 elif "tinyllama" in chat_model:
                     model_input = f"<|system|>\nYou are a helpful assistant. Please answer the question professionally and provide explanations.</s>\n<|user|>\n{data_line['question']}</s>\n<|assistant|>"
                 elif "llama" in chat_model and "tiny" not in chat_model:

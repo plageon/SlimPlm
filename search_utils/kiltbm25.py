@@ -18,7 +18,7 @@ def bm25_search(queries, search_engine):
         try:
             body = {'queries': queries}
             if search_engine == "kiltbm25":
-                res = requests.request('GET', 'http://172.17.31.12:5050/search/bm25/', json=body)
+                res = requests.request('GET', f'http://{address}/search/bm25/', json=body)
             else:
                 raise NotImplementedError(f"search engine {search_engine} is not implemented")
             search_results = json.loads(res.text)["search_results"]
@@ -41,11 +41,13 @@ if __name__ == "__main__":
     arg_parser.add_argument("--search_method", type=str, default="vanilla_search", help="search method")
     arg_parser.add_argument("--mini_dataset", action="store_true", help="whether to use mini dataset")
     arg_parser.add_argument("--search_engine", type=str, default="kiltbm25")
+    arg_parser.add_argument("--address", type=str, default="172.17.66.79:5050")
     args = arg_parser.parse_args()
     dataset = args.dataset
     split = args.split
     search_method = args.search_method
     search_engine = args.search_engine
+    address = args.address
 
     gpt4sep_base = "llama13b"
     sep_base = "llama7b"

@@ -98,5 +98,15 @@ Run ITER-RETGEN baseline, please refer to [itergen_chat.sh](baseline_scripts/ite
 
 Run Self-Ask baseline, please refer to [selfask_chat.sh](baseline_scripts/selfask_chat.sh), [selfask_reader.sh](baseline_scripts/selfask_reader.sh), and [selfask_search.sh](baseline_scripts/selfask_search.sh).
 
+## Citation
+If you use the code in this repository, please cite the following paper:
+```
+@inproceedings{Tan2024SmallMB,
+  title={Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs},
+  author={Jiejun Tan and Zhicheng Dou and Yutao Zhu and Peidong Guo and Kun Fang and Jinhui Wen},
+  year={2024},
+  url={https://api.semanticscholar.org/CorpusID:267750726}
+}
+```
 
 

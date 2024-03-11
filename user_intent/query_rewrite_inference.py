@@ -36,7 +36,7 @@ def construct_input_text(json_line, language):
         if provide_without_search_answer:
             prompt = (f"<s>[INST] <<SYS>>\nYou are a helpful assistant. Your task is to parse user input into"
                       f" structured formats according to the coarse answer. Current datatime is 2023-12-20 9:47:28"
-                      f" <</SYS>>\n Course answer: (({json_line[key_without_search_answer]}))\nQuestion: "
+                      f" <</SYS>>\n Course answer: (({json_line['key_without_search_answer']}))\nQuestion: "
                       f"(({json_line['question']})) [/INST]")
         else:
             prompt = (f"<s>[INST] <<SYS>>\nYou are a helpful assistant. Your task is to parse user input into"
@@ -46,7 +46,7 @@ def construct_input_text(json_line, language):
         #     if provide_without_search_answer:
         #         prompt = (f"<s>[INST] <<SYS>>\nYou are a helpful assistant. Your task is to judge whether the model"
         #                  f" has known the information about the question according to the coarse answer."
-        #                  f" <</SYS>>\n Course answer: (({json_line[key_without_search_answer]}))\nQuestion: "
+        #                  f" <</SYS>>\n Course answer: (({json_line['key_without_search_answer']}))\nQuestion: "
         #                  f"(({json_line['question']})) [/INST]")
         #     else:
         #         prompt = (f"<s>[INST] <<SYS>>\nYou are a helpful assistant. Your task is to parse user input into"

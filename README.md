@@ -94,7 +94,7 @@ Follow these steps to reproduce the results in the paper.
 8. Run evaluation on large language model using rag. Please make sure the "prompt_method" is "v0118{proxy_model_name}_rewrite_search", such as "v0118llama7b_rewrite_search".
 
 ### Evaluation
-Run evalation for short form answer dataset or long form answer dataset, please refer to [evaluation_scripts.sh](scripts/evaluation_scripts.sh).
+Run evalation for short form answer dataset or long form answer dataset, please refer to [evaluation_scripts.sh](jupyter/evaluation_scripts.ipynb).
 
 ## Baselines
 

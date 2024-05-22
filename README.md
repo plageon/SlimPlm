@@ -6,8 +6,11 @@
 📝 <a href="https://arxiv.org/abs/2402.12052" target="_blank">Paper</a> • 🤗 <a href="https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/" target="_blank">Hugging Face</a> • 🧩 <a href="https://github.com/plageon/SlimPLM" target="_blank">Github</a>
 </p>
 
-The code repository for the anonymous submission for ACL 2024:
-_Detect Missing Knowledge in LLMs with Slim Proxy Language Model_.
+## ⚡ **News**
+_**May 2024:** Our new work, **[SlimPLM](https://github.com/plageon/SlimPlm)**, has been accepted by **ACL 2024 main** conference._
+
+The code repository for **ACL 2024 main** conference paper:
+**_Detect Missing Knowledge in LLMs with Slim Proxy Language Model_**.
 
 ![main-pipeline](./figures/main-pipeline.png)
 

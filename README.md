@@ -29,7 +29,7 @@ conda install -c conda-forge openjdk=11 maven -y
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
 # https://github.com/facebookresearch/faiss/blob/main/INSTALL.md
 conda install -c conda-forge faiss-gpu
-pip install pyserini pymongo dgango
+pip install pyserini pymongo django
 # -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install scikit-learn transformers transformers[deepspeed] rouge_score evaluate dataset gpustat
 ```

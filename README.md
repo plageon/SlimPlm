@@ -74,13 +74,14 @@ The sampled test set ids are provided in [user_intent_data](./user_intent_data) 
 Prepare fine-tuning data for retrieval necessity judgment model, please refer to [prepare_data.ipynb](jupyter/prepare_data.ipynb).
 
 We release our fine-tuning data for retrieval necessity judgment model in [v0104](./user_intent_data/mixed/v0104/).
+
+Prepare fine-tuning data for query rewriting model, please refer to [gpt4_annotation.sh](scripts/gpt4_annotation.sh) and [seperate_claims.sh](scripts/seperate_claims.sh).
+
 The fine-tuning data for query rewriting model is released in [v0118](./user_intent_data/mixed/v0118/).
 
 The fine-tuned retrieval necessity judgment model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Retrieval-Necessity-Judgment), and the query rewriting model is released in [huggingface](https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/).
 
 ### Model Inference
-Prepare fine-tuning data for query rewriting model, please refer to [gpt4_annotation.sh](scripts/gpt4_annotation.sh) and [seperate_claims.sh](scripts/seperate_claims.sh).
-
 Run chat inference for proxy language model or large language model, please refer to [chat_inference.sh](scripts/chat_inference.sh).
 
 Run inference on the fine-tuned retrieval necessity judgment model or query rewriting model, please refer to [query_rewrite_inference.sh](scripts/query_rewrite_inference.sh).

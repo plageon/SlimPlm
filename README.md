@@ -6,14 +6,16 @@
 📝 <a href="https://arxiv.org/abs/2402.12052" target="_blank">Paper</a> • 🤗 <a href="https://huggingface.co/zstanjj/SlimPLM-Query-Rewriting/" target="_blank">Hugging Face</a> • 🧩 <a href="https://github.com/plageon/SlimPLM" target="_blank">Github</a>
 </p>
 
+🌹 If you use this model, please star our **[GitHub repository](https://github.com/plageon/SlimPlm)** to support us. Your star means a lot!
+
 The code repository for **ACL 2024 main** conference paper:
-**_Detect Missing Knowledge in LLMs with Slim Proxy Language Model_**.
+**_Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs_**.
 
 ![main-pipeline](./figures/main-pipeline.png)
 
 
 ## ⚡ **News**
-_**May 2024:** Our new work, **[SlimPLM](https://github.com/plageon/SlimPlm)**, has been accepted by **ACL 2024 main** conference._
+_**May 2024:** Our new work, **[Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs](https://aclanthology.org/2024.acl-long.242/)**, has been accepted by **ACL 2024 main** conference._
 
 ## Pre-requisites
 ### Environment

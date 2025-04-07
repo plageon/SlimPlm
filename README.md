@@ -116,11 +116,29 @@ Run Self-Ask baseline, please refer to [selfask_chat.sh](baseline_scripts/selfas
 ## Citation
 If you use the code in this repository, please cite the following paper:
 ```
-@inproceedings{Tan2024SmallMB,
-  title={Small Models, Big Insights: Leveraging Slim Proxy Models To Decide When and What to Retrieve for LLMs},
-  author={Jiejun Tan and Zhicheng Dou and Yutao Zhu and Peidong Guo and Kun Fang and Ji-Rong Wen},
-  year={2024},
-  url={https://arxiv.org/abs/2402.12052}
+@inproceedings{DBLP:conf/acl/TanD0GFW24,
+  author       = {Jiejun Tan and
+                  Zhicheng Dou and
+                  Yutao Zhu and
+                  Peidong Guo and
+                  Kun Fang and
+                  Ji{-}Rong Wen},
+  editor       = {Lun{-}Wei Ku and
+                  Andre Martins and
+                  Vivek Srikumar},
+  title        = {Small Models, Big Insights: Leveraging Slim Proxy Models To Decide
+                  When and What to Retrieve for LLMs},
+  booktitle    = {Proceedings of the 62nd Annual Meeting of the Association for Computational
+                  Linguistics (Volume 1: Long Papers), {ACL} 2024, Bangkok, Thailand,
+                  August 11-16, 2024},
+  pages        = {4420--4436},
+  publisher    = {Association for Computational Linguistics},
+  year         = {2024},
+  url          = {https://doi.org/10.18653/v1/2024.acl-long.242},
+  doi          = {10.18653/V1/2024.ACL-LONG.242},
+  timestamp    = {Mon, 03 Mar 2025 20:56:48 +0100},
+  biburl       = {https://dblp.org/rec/conf/acl/TanD0GFW24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 

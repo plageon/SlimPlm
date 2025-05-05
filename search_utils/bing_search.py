@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 class BingSearch(object):
     
     BASE_PATH = "https://api.bing.microsoft.com/v7.0/search?{}"
-    SECRET_KEY = "d73c4b858f3f457a845598c4859e178b"
+    SECRET_KEY = "your secret key"
     
     @classmethod
     def _query(cls, query, count, mkt="zh-CN"):
